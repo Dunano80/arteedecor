@@ -4,17 +4,27 @@
 const carrossel = document.querySelector('.carrossel');
 
 if (carrossel) {
+
     const btnNext = document.querySelector('.next');
     const btnPrev = document.querySelector('.prev');
+    const card = document.querySelector('.card');
 
-    if (btnNext && btnPrev) {
-        btnNext.addEventListener('click', () => {
-            carrossel.scrollLeft += 300;
+    if (btnNext && btnPrev && card) {
+
+        btnNext.addEventListener("click", () => {
+            carrossel.scrollBy({
+                left: card.offsetWidth + 20,
+                behavior: "smooth"
+            });
         });
 
-        btnPrev.addEventListener('click', () => {
-            carrossel.scrollLeft -= 300;
+        btnPrev.addEventListener("click", () => {
+            carrossel.scrollBy({
+                left: -(card.offsetWidth + 20),
+                behavior: "smooth"
+            });
         });
+
     }
 }
 
