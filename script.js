@@ -199,7 +199,7 @@ if (campoBusca && btnBusca) {
         if (
             texto.includes("festa") || texto.includes("pizza") ||
             texto.includes("harry") || texto.includes("frozen") ||
-            texto.includes("ghost") || texto.includes("power") ||
+            texto.includes("ghostbuster") || texto.includes("power") ||
             texto.includes("peach") || texto.includes("pokemon") ||
             texto.includes("mario") || texto.includes("buster") ||
             texto.includes("pizzaria") || texto.includes("elsa")
