@@ -640,4 +640,13 @@ footer {
         grid-template-columns: 1fr;
         gap: 20px;
     }
+   /* Carrossel adaptado para celular */
+   .carrossel {
+        gap: 10px;
+        scroll-snap-type: x mandatory;
+    }
+
+    .card {
+        min-width: 100%;
+        scroll-snap-align: center;
 }
