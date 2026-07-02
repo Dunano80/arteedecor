@@ -111,9 +111,9 @@ if (gridAlbuns) {
             fotos: gerarAlbum("frozen", 6, "festa05img")
         },
         {
-            nome: "Ghost Buster",
+            nome: "Ghostbusters",
             capa: "imagens/festas/ghost/festa06img01.jpg",
-            fotos: gerarAlbum("ghost", 9, "festa06img")
+            fotos: gerarAlbum("ghostbuster", 9, "festa06img")
         }
     ];
 
