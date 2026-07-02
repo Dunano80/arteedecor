@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Arte e Decor com a Pri e a Tha. Decoração de festas personalizadas, tutoriais e inspirações.">
+    <meta name="keywords" content="festas, decoração, lembrancinhas, personalizados, aniversário, artesanato">
+    <meta name="Fernando Eduardo" content="Fernando">
+    <title>Arte e Decor com a Pri e a Tha | Inicio</title>    
+    <link rel="icon" href="faveicon.png" type="image/png">
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+    <div class="top-bar">
+        <div class="container">
+            <div class="menu-superior">
+                <a href="https://www.instagram.com/arte.edecorcomapri/" target="_blank" rel="noopener noreferrer"><img src="./imagens/icons/instagramicon.png" alt="Instagram"></a>
+                <a href="https://www.facebook.com/arte.edecorcomapri" target="_blank" rel="noopener noreferrer"><img src="./imagens/icons/facebookicon.png" alt="Facebook"></a>
+                <a href="https://it.pinterest.com/priscilakazmierczak/" target="_blank" rel="noopener noreferrer"><img src="./imagens/icons/pinteresticon.png" alt="Pinterest"></a>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="Logo3.png" alt="Arte e Decor">
+                </a>
+            </div>
+
+            <div class="titulo">
+                <h1>Arte e Decor com a Pri e a Tha</h1>
+            </div>
+
+            <div class="busca">
+                <input type="text" id="campoBusca" placeholder="Qual tema procura?">
+                <button id="btnBusca">🔍</button>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="festa.html">Festas</a></li>
+                <li><a href="tutorial.html">Tutoriais</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="home-banner">
+        <img id="bannerSlide" src="./imagens/banners/banner05.jpeg" alt="Banner">
+    </section>
+
+    <section class="container">
+        <h2 class="home-titulo">Temas em Destaque</h2>
+        
+        <div class="carrossel-container">
+            <button class="btn prev">&#10094;</button>
+            
+            <div class="carrossel">
+                <div class="card" onclick="location.href='festa.html'">
+                    <img src="imagens/festas/pizza/festa01img01.jpg" alt="Festa Pizza">
+                    <h3>Pizza</h3>
+                </div>
+
+                <div class="card" onclick="location.href='festa.html'">
+                    <img src="imagens/festas/peach/festa02img01.jpg" alt="Festa Mario Bros">
+                    <h3>Mario Bros</h3>
+                </div>
+
+                <div class="card" onclick="location.href='festa.html'">
+                    <img src="imagens/festas/powerrangers/festa03img01.jpg" alt="Festa Power Rangers">
+                    <h3>Power Rangers</h3>
+                </div>
+
+                <div class="card" onclick="location.href='festa.html'">
+                    <img src="imagens/festas/harrypotter/festa04img01.jpg" alt="Festa Harry Potter">
+                    <h3>Harry Potter</h3>
+                </div>
+
+                <div class="card" onclick="location.href='festa.html'">
+                    <img src="imagens/festas/frozen/festa05img01.jpg" alt="Festa Frozen">
+                    <h3>Frozen</h3>
+                </div>
+
+                <div class="card" onclick="location.href='festa.html'">
+                    <img src="imagens/festas/ghost/festa06img01.jpg" alt="Festa GhostBusters">
+                    <h3>GhostBuster</h3>
+                </div>
+            </div>
+
+            <button class="btn next">&#10095;</button>
+        </div>
+
+        <div class="centro">
+            <a class="botao" href="festa.html">Ver todas as festas</a>
+        </div>
+    </section>
+
+    <section class="container">
+        <h2 class="titulo-secao">Tutoriais em Destaque</h2>
+        
+        <div class="home-grid">
+            <div class="home-video">
+                <video preload="metadata" controls>
+                    <source src="videos/tutorial/tutorial01.mp4" type="video/mp4">
+                </video>
+                <h3>Tubete Planta Carnívora</h3>
+            </div>
+
+            <div class="home-video">
+                <video preload="metadata" controls>
+                    <source src="videos/tutorial/tutorial02.mp4" type="video/mp4">
+                </video>
+                <h3>Bolo Fake Pokémon</h3>
+            </div>
+
+            <div class="home-video">
+                <video preload="metadata" controls>
+                    <source src="videos/tutorial/tutorial03.mp4" type="video/mp4">
+                </video>
+                <h3>Guirlanda Gigante</h3>
+            </div>
+        </div>
+
+        <div class="home-centro">
+            <a class="botao" href="tutorial.html">Ver todos os tutoriais</a>
+        </div>
+    </section>
+
+    <section class="home-sobre">
+        <div class="container">
+            <h2>Quem Somos</h2>
+            <p>
+                Somos apaixonadas por transformar momentos especiais em lembranças inesquecíveis.
+                Criamos decorações personalizadas, lembrancinhas, bolos fake, painéis, centros de mesa e muitos outros detalhes feitos com carinho para tornar cada festa única.
+                Nosso objetivo é levar criatividade, delicadeza e muito amor para cada projeto.
+            </p>
+        </div>
+    </section>
+
+    <section class="home-contato">
+        <div class="container">
+            <h2>Tem alguma dúvida?</h2>
+            <p>Será um prazer conversar com você. Entre em contato para solicitar orçamento ou tirar dúvidas.</p>
+            <a class="home-btn" href="contato.html">Fale Conosco</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-grid">
+            <div>
+                <h3>Arte e Decor</h3>
+                <p>Transformando sonhos em festas inesquecíveis.</p>
+            </div>
+
+            <div>
+                <h3>Menu</h3>
+                <a href="index.html">Início</a>
+                <a href="festa.html">Festas</a>
+                <a href="tutorial.html">Tutoriais</a>
+                <a href="contato.html">Contato</a>
+            </div>
+
+            <div>
+                <h3>Redes Sociais</h3>
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="#">Pinterest</a>
+            </div>
+
+            <div>
+                <h3>Contato</h3>
+                <p>Tem dúvidas ou sugestões?</p>
+                <a href="contato.html">Clique aqui</a>
+            </div>
+        </div>
+
+        <div class="copyright">
+            © 2026 Arte e Decor com a Pri e a Tha
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

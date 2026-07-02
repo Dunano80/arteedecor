@@ -1,0 +1,643 @@
+/* ==========================================================================
+   1. RESET E CONFIGURAÇÕES GLOBAIS
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garante que padding e border não alterem o tamanho final dos elementos */
+}
+
+body {
+    background-color: rgba(125, 143, 105, 0.25); /* Fundo sutil esverdeado */
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Container padrão para centralizar o conteúdo do site */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Centralizador padrão para botões e links */
+.centro, .home-centro {
+    text-align: center;
+    margin: 30px 0 50px;
+}
+
+/* Botão Padrão do Site */
+.botao, .home-btn {
+    display: inline-block;
+    background-color: #7D8F69;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.botao:hover, .home-btn:hover {
+    background-color: #6b7f5d;
+}
+
+
+/* ==========================================================================
+   2. TOP BAR (BARRA DE REDES SOCIAIS)
+   ========================================================================== */
+.top-bar {
+    width: 100%;
+    height: 35px;
+    background-color: #7D8F69;
+    display: flex;
+    align-items: center;
+}
+
+.menu-superior {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    height: 100%;
+}
+
+.menu-superior a {
+    display: flex;
+    align-items: center;
+}
+
+.menu-superior img {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    transition: transform 0.2s ease;
+}
+
+.menu-superior img:hover {
+    transform: scale(1.15);
+}
+
+
+/* ==========================================================================
+   3. HEADER (LOGO, TÍTULO E BUSCA)
+   ========================================================================== */
+header {
+    width: 100%;
+    background-color: blanchedalmond;
+    overflow: hidden;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    min-height: 120px;
+    padding: 10px 0;
+}
+
+.logo, .logo a {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    max-height: 120px;
+    display: block;
+}
+
+.titulo {
+    flex: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo h1 {
+    color: #C97A3D;
+    font-family: cursive;
+    text-align: center;
+}
+
+/* Barra de pesquisa */
+.busca {
+    flex: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.busca input {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.busca button {
+    padding: 10px 14px;
+    border: none;
+    background-color: #7D8F69;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.busca button:hover {
+    background-color: #6b7f5d;
+}
+
+
+/* ==========================================================================
+   4. MENU DE NAVEGAÇÃO (NAV)
+   ========================================================================== */
+nav {
+    width: 100%;
+    background-color: rgba(125, 143, 105, 0.15);
+    border-bottom: 1px solid rgba(125, 143, 105, 0.3);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #C97A3D;
+    font-weight: bold;
+    padding: 15px;
+    display: block;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: #a65d28;
+}
+
+
+/* ==========================================================================
+   5. COMPONENTES REUTILIZÁVEIS (BANNERS, CARDS, CARROSSEL)
+   ========================================================================== */
+
+/* Títulos de Seções */
+.titulo-secao, .home-titulo {
+    text-align: center;
+    color: #C97A3D;
+    font-family: cursive;
+    margin: 50px 0 30px;
+}
+
+/* Banner Rotativo */
+.home-banner, .banner {
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    background: #eee;
+}
+
+.home-banner img, .banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 40%;
+}
+
+/* Estrutura do Carrossel (Home) */
+.carrossel-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.carrossel {
+    display: flex;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+/* Cards de Itens (Festas/Temas) */
+.card, .home-card {
+    min-width: 250px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,.15);
+    cursor: pointer;
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.card:hover, .home-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0,0,0,.2);
+}
+
+.card img, .home-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card h3, .home-card h3 {
+    padding: 15px;
+    text-align: center;
+    color: #C97A3D;
+}
+
+/* Botões de navegação do carrossel */
+.btn {
+    background: #7D8F69;
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.2s;
+}
+
+.btn:hover {
+    background: #6b7f5d;
+}
+
+
+/* ==========================================================================
+   6. SEÇÕES ESPECÍFICAS DA PÁGINA INICIAL (HOME)
+   ========================================================================== */
+
+/* Grid de Vídeos/Tutoriais na Home */
+.home-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.home-video, .tutorial-home {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+
+.home-video video, .tutorial-home video {
+    width: 100%;
+    height: 220px;
+    background: #000;
+    display: block;
+}
+
+.home-video h3, .tutorial-home h3 {
+    text-align: center;
+    padding: 15px;
+    color: #C97A3D;
+}
+
+/* Seção Quem Somos */
+.home-sobre, .quem-somos {
+    background: white;
+    padding: 60px 20px;
+    margin-top: 60px;
+}
+
+.home-sobre h2, .quem-somos h2 {
+    text-align: center;
+    color: #C97A3D;
+    font-family: cursive;
+    margin-bottom: 25px;
+}
+
+.home-sobre p, .quem-somos p {
+    max-width: 850px;
+    margin: auto;
+    line-height: 1.8;
+    text-align: justify;
+    color: #555;
+}
+
+/* Chamada de Contato na Home */
+.home-contato, .contato-home {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.home-contato h2, .contato-home h2 {
+    color: #C97A3D;
+    font-family: cursive;
+    margin-bottom: 15px;
+}
+
+.home-contato p, .contato-home p {
+    margin-bottom: 25px;
+    color: #555;
+}
+
+
+/* ==========================================================================
+   7. PÁGINA: INTERNA DE FESTAS (ÁLBUNS E MODAL)
+   ========================================================================== */
+.albuns {
+    padding: 50px 0;
+}
+
+.albuns h2 {
+    text-align: center;
+    color: #C97A3D;
+    font-family: cursive;
+    margin-bottom: 40px;
+}
+
+/* Layout fixo: 2 álbuns por linha no desktop */
+.grid-albuns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.album-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.album-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.album-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.album-card h3 {
+    text-align: center;
+    padding: 12px;
+    color: #C97A3D;
+}
+
+/* Estrutura do Modal de Fotos */
+.modal-album {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal-album img {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.1);
+}
+
+.fechar-modal {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+}
+
+.seta {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.2s;
+    user-select: none;
+}
+
+.seta:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.prev-foto { left: 20px; }
+.next-foto { right: 20px; }
+
+.contador-foto {
+    position: absolute;
+    bottom: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+
+/* ==========================================================================
+   8. PÁGINA: INTERNA DE TUTORIAIS
+   ========================================================================== */
+.tutorial {
+    padding: 50px 0;
+}
+
+.tutorial h2 {
+    text-align: center;
+    color: #C97A3D;
+    font-family: cursive;
+    margin-bottom: 40px;
+}
+
+.grid-tutoriais {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.video-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.15);
+    padding: 20px;
+}
+
+.video-card h3 {
+    text-align: center;
+    color: #C97A3D;
+    margin-bottom: 15px;
+}
+
+.video-card video {
+    width: 100%;
+    height: 280px;
+    border-radius: 8px;
+    background: #000;
+    display: block;
+}
+
+.video-card p {
+    margin-top: 15px;
+    text-align: justify;
+    line-height: 1.6;
+    color: #555;
+}
+
+
+/* ==========================================================================
+   9. PÁGINA: INTERNA DE CONTATO (FORMULÁRIO)
+   ========================================================================== */
+.contato {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.15);
+}
+
+.contato h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #C97A3D;
+    font-family: cursive;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.campo label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.campo input, .campo textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.btn-enviar {
+    background-color: #7D8F69;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s;
+}
+
+.btn-enviar:hover {
+    background-color: #6b7f5d;
+}
+
+#mensagemErro {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+
+/* ==========================================================================
+   10. RODAPÉ GLOBAL (FOOTER)
+   ========================================================================== */
+footer {
+    width: 100%;
+    background-color: #7D8F69;
+    padding-top: 40px;
+    margin-top: 60px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    color: #fff;
+    padding-bottom: 40px;
+}
+
+.footer-grid h3 {
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.footer-grid p {
+    line-height: 1.6;
+}
+
+.footer-grid a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 8px;
+    transition: text-decoration 0.2s;
+}
+
+.footer-grid a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    text-align: center;
+    color: #fff;
+    padding: 20px 0;
+    border-top: 1px solid rgba(255,255,255,.2);
+    background-color: #7D8F69;
+}
+
+
+/* ==========================================================================
+   11. RESPONSIVIDADE (DISPOSITIVOS MÓVEIS / CELULAR)
+   ========================================================================== */
+@media (max-width: 768px) {
+    
+    /* Elementos do topo */
+    .header-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .busca {
+        width: 100%;
+    }
+
+    .busca input {
+        width: 100%;
+    }
+
+    /* Banners adaptáveis */
+    .home-banner, .banner {
+        height: 250px;
+    }
+
+    /* Grids de colunas que viram linhas únicas no celular */
+    .home-grid, 
+    .grid-home, 
+    .grid-albuns, 
+    .grid-tutoriais, 
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
