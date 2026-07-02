@@ -113,7 +113,7 @@ if (gridAlbuns) {
         {
             nome: "Ghostbusters",
             capa: "imagens/festas/ghost/festa06img01.jpg",
-            fotos: gerarAlbum("ghostbuster", 9, "festa06img")
+            fotos: gerarAlbum("ghost", 9, "festa06img")
         }
     ];
 
